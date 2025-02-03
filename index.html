@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Hub</title>
+    <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center">
-        <h1 class="text-3xl font-bold mb-6">Welcome to Message Hub</h1>
-        <p class="text-gray-600 mb-8">Manage all your messages in one place.</p>
-        <a href="signup.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2">Sign Up</a>
-        <a href="login.html" class="bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Login</a>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/40" alt="Logo" class="mr-3 rounded-full">
+                <span class="font-bold text-xl">Message Hub</span>
+            </div>
+            <div class="flex items-center">
+                <a href="signup.html" class="text-blue-500 hover:text-blue-700 mr-4">Sign Up</a>
+                <a href="login.html" class="text-blue-500 hover:text-blue-700">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 py-6 flex">
+        <aside class="w-1/4 pr-6">
+            <ul class="space-y-2">
+                <li><a href="#" class="block bg-blue-500 text-white py-2 px-4 rounded">WhatsApp</a></li>
+                <li><a href="#" class="block py-2 px-4 rounded hover:bg-gray-200">Instagram</a></li>
+                <li><a href="#" class="block py-2 px-4 rounded hover:bg-gray-200">Gmail</a></li>
+                <li><a href="#" class="block py-2 px-4 rounded hover:bg-gray-200">Outlook</a></li>
+            </ul>
+        </aside>
+
+        <main class="w-3/4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-6">Inbox</h2>
+                <ul class="divide-y divide-gray-200">
+                    <li class="py-4">
+                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-2 rounded">
+                            <img src="https://via.placeholder.com/40" alt="Sender" class="mr-4 rounded-full">
+                            <div>
+                                <p class="font-bold">John Doe</p>
+                                <p class="text-gray-700">Hello, how are you?</p>
+                            </div>
+                            <span class="ml-auto text-gray-500">10:30 AM</span>
+                        </a>
+                    </li>
+                    <li class="py-4">
+                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-2 rounded">
+                            <img src="https://via.placeholder.com/40" alt="Sender" class="mr-4 rounded-full">
+                            <div>
+                                <p class="font-bold">Jane Smith</p>
+                                <p class="text-gray-700">Meeting at 3 PM</p>
+                            </div>
+                            <span class="ml-auto text-gray-500">9:45 AM</span>
+                        </a>
+                    </li>
+                    <!-- Add more messages as needed -->
+                </ul>
+            </div>
+        </main>
     </div>
 </body>
 </html>

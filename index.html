@@ -4,48 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Hub</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        header {
+            background-image: url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
         }
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .feature img {
+            margin-right: 15px;
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
-    <!-- Hero Section -->
-    <section class="relative bg-cover bg-center h-screen" style="background-image: url('hero-bg.jpg');">
-        <div class="absolute inset-0 bg-blue-900 opacity-70"></div>
-        <div class="container mx-auto px-6 py-32 relative z-10 text-center text-white">
-            <h1 class="text-5xl font-bold mb-4 fade-in">Welcome to Message Hub</h1>
-            <p class="text-xl mb-8 fade-in">Manage all your messages in one place from Gmail, WhatsApp, Instagram, and Facebook.</p>
-            <a href="dashboard.html" class="bg-blue-500 hover:bg-blue-600 transition duration-300 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl fade-in">Go to Dashboard</a>
-        </div>
-    </section>
+<body>
+    <header>
+        <h1>Message Hub</h1>
+        <p>Welcome to Message Hub</p>
+        <p>Manage all your messages in one place from Gmail, WhatsApp, Instagram, and Facebook.</p>
+        <a href="dashboard.html" style="background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Go to Dashboard</a>
+    </header>
 
-    <!-- Features Section -->
-    <section class="container mx-auto px-6 py-12 bg-white">
-        <h2 class="text-3xl font-bold text-center mb-8 text-blue-800">Why Choose Message Hub?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center fade-in">
-                <img src="inbox-icon.png" alt="Unified Inbox" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-bold mb-2 text-blue-800">Unified Inbox</h3>
-                <p class="text-gray-600">View all your messages from Gmail, WhatsApp, Instagram, and Facebook in one place.</p>
-            </div>
-            <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center fade-in">
-                <img src="ai-icon.png" alt="AI Suggestions" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-bold mb-2 text-blue-800">AI Suggestions</h3>
-                <p class="text-gray-600">Get smart reply suggestions to save time and improve communication efficiency.</p>
-            </div>
-            <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center fade-in">
-                <img src="design-icon.png" alt="User-Friendly Design" class="mx-auto mb-4 w-16">
-                <h3 class="text-xl font-bold mb-2 text-blue-800">User-Friendly Design</h3>
-                <p class="text-gray-600">Intuitive interface designed for seamless usability across devices.</p>
-            </div>
+    <section>
+        <h2>Why Choose Message Hub?</h2>
+        <div class="feature">
+            <img src="images/gmail-icon.png" alt="Unified Inbox Icon" width="30">
+            <p>View all your messages from Gmail, WhatsApp, Instagram, and Facebook in one place.</p>
+        </div>
+        <div class="feature">
+            <img src="images/whatsapp-icon.png" alt="AI Suggestions Icon" width="30">
+            <p>Get smart reply suggestions to save time and improve communication efficiency.</p>
+        </div>
+        <div class="feature">
+            <img src="images/facebook-icon.png" alt="User-Friendly Design Icon" width="30">
+            <p>Intuitive interface designed for seamless usability across devices.</p>
         </div>
     </section>
 </body>

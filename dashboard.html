@@ -3,132 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Dashboard - Message Hub</title>
     <style>
-        /* Sidebar Hover Animation */
-        @keyframes slideIn {
-            from { transform: translateX(-20px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: black;
         }
-        .slide-in {
-            animation: slideIn 0.5s ease-in-out;
+        nav img {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .message img {
+            margin-right: 10px;
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
-    <!-- Navbar -->
-    <nav class="bg-blue-800 shadow-md">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="logo.png" alt="Logo" class="mr-3 w-10 h-10 rounded-full">
-                <span class="font-bold text-xl text-white">Message Hub</span>
-            </div>
-            <div class="flex items-center">
-                <input type="text" placeholder="Search messages..." class="px-4 py-2 rounded-full border mr-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <a href="index.html" class="text-white hover:text-blue-300 transition duration-300">Home</a>
-            </div>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#gmail"><img src="images/gmail-icon.png" alt="Gmail Icon" width="20"> Gmail</a>
+            <a href="#whatsapp"><img src="images/whatsapp-icon.png" alt="WhatsApp Icon" width="20"> WhatsApp</a>
+            <a href="#instagram"><img src="images/instagram-icon.png" alt="Instagram Icon" width="20"> Instagram</a>
+            <a href="#facebook"><img src="images/facebook-icon.png" alt="Facebook Icon" width="20"> Facebook</a>
+        </nav>
+    </header>
+
+    <section id="gmail">
+        <h2>Gmail Messages</h2>
+        <div class="message">
+            <img src="images/user-avatar.png" alt="User Avatar" width="30">
+            <strong>John Doe</strong>: Hello, how are you?<br>
+            <small>10:30 AM</small>
         </div>
-    </nav>
+        <div class="message">
+            <img src="images/user-avatar.png" alt="User Avatar" width="30">
+            <strong>Jane Smith</strong>: Meeting at 3 PM<br>
+            <small>9:45 AM</small>
+        </div>
+    </section>
 
-    <!-- Sidebar and Main Content -->
-    <div class="container mx-auto px-6 py-6 flex">
-        <!-- Sidebar -->
-        <aside class="w-1/4 pr-6">
-            <ul class="space-y-2 slide-in">
-                <li><a href="#gmail" class="flex items-center py-3 px-4 rounded hover:bg-blue-100 transition duration-300" onclick="showTab('gmail')"><img src="gmail-icon.png" alt="Gmail" class="mr-2 w-6 h-6"> Gmail</a></li>
-                <li><a href="#whatsapp" class="flex items-center py-3 px-4 rounded hover:bg-blue-100 transition duration-300" onclick="showTab('whatsapp')"><img src="whatsapp-icon.png" alt="WhatsApp" class="mr-2 w-6 h-6"> WhatsApp</a></li>
-                <li><a href="#instagram" class="flex items-center py-3 px-4 rounded hover:bg-blue-100 transition duration-300" onclick="showTab('instagram')"><img src="instagram-icon.png" alt="Instagram" class="mr-2 w-6 h-6"> Instagram</a></li>
-                <li><a href="#facebook" class="flex items-center py-3 px-4 rounded hover:bg-blue-100 transition duration-300" onclick="showTab('facebook')"><img src="facebook-icon.png" alt="Facebook" class="mr-2 w-6 h-6"> Facebook</a></li>
-            </ul>
-        </aside>
+    <section id="whatsapp">
+        <h2>WhatsApp Messages</h2>
+        <div class="message">
+            <img src="images/user-avatar.png" alt="User Avatar" width="30">
+            <strong>Alice Johnson</strong>: Hey, what's up?<br>
+            <small>11:00 AM</small>
+        </div>
+    </section>
 
-        <!-- Main Content -->
-        <main class="w-3/4">
-            <div id="gmail" class="p-4">
-                <h2 class="text-2xl font-bold mb-4 text-blue-800">Gmail Messages</h2>
-                <ul class="divide-y divide-gray-200">
-                    <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-blue-100 p-4 rounded-lg transition duration-300">
-                            <img src="user-avatar.png" alt="Sender" class="mr-4 w-10 h-10 rounded-full">
-                            <div>
-                                <p class="font-bold text-blue-800">John Doe</p>
-                                <p class="text-gray-600">Hello, how are you?</p>
-                            </div>
-                            <span class="ml-auto text-gray-500">10:30 AM</span>
-                        </a>
-                    </li>
-                    <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-blue-100 p-4 rounded-lg transition duration-300">
-                            <img src="user-avatar.png" alt="Sender" class="mr-4 w-10 h-10 rounded-full">
-                            <div>
-                                <p class="font-bold text-blue-800">Jane Smith</p>
-                                <p class="text-gray-600">Meeting at 3 PM</p>
-                            </div>
-                            <span class="ml-auto text-gray-500">9:45 AM</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div id="whatsapp" class="p-4 hidden">
-                <h2 class="text-2xl font-bold mb-4 text-blue-800">WhatsApp Messages</h2>
-                <ul class="divide-y divide-gray-200">
-                    <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-blue-100 p-4 rounded-lg transition duration-300">
-                            <img src="user-avatar.png" alt="Sender" class="mr-4 w-10 h-10 rounded-full">
-                            <div>
-                                <p class="font-bold text-blue-800">Alice Johnson</p>
-                                <p class="text-gray-600">Hey, what's up?</p>
-                            </div>
-                            <span class="ml-auto text-gray-500">11:00 AM</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div id="instagram" class="p-4 hidden">
-                <h2 class="text-2xl font-bold mb-4 text-blue-800">Instagram Messages</h2>
-                <ul class="divide-y divide-gray-200">
-                    <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-blue-100 p-4 rounded-lg transition duration-300">
-                            <img src="user-avatar.png" alt="Sender" class="mr-4 w-10 h-10 rounded-full">
-                            <div>
-                                <p class="font-bold text-blue-800">Bob Brown</p>
-                                <p class="text-gray-600">Check out this photo!</p>
-                            </div>
-                            <span class="ml-auto text-gray-500">12:00 PM</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div id="facebook" class="p-4 hidden">
-                <h2 class="text-2xl font-bold mb-4 text-blue-800">Facebook Messages</h2>
-                <ul class="divide-y divide-gray-200">
-                    <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-blue-100 p-4 rounded-lg transition duration-300">
-                            <img src="user-avatar.png" alt="Sender" class="mr-4 w-10 h-10 rounded-full">
-                            <div>
-                                <p class="font-bold text-blue-800">Charlie Davis</p>
-                                <p class="text-gray-600">Happy Birthday!</p>
-                            </div>
-                            <span class="ml-auto text-gray-500">1:00 PM</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </main>
-    </div>
+    <section id="instagram">
+        <h2>Instagram Messages</h2>
+        <div class="message">
+            <img src="images/user-avatar.png" alt="User Avatar" width="30">
+            <strong>Bob Brown</strong>: Check out this photo!<br>
+            <small>12:00 PM</small>
+        </div>
+    </section>
 
-    <script>
-        function showTab(tabId) {
-            const tabs = document.querySelectorAll('[id^=""]');
-            tabs.forEach(tab => tab.classList.add('hidden'));
-            document.querySelector(`#${tabId}`).classList.remove('hidden');
-        }
-
-        // Initialize with Gmail tab open
-        document.addEventListener('DOMContentLoaded', () => {
-            showTab('gmail');
-        });
-    </script>
+    <section id="facebook">
+        <h2>Facebook Messages</h2>
+        <div class="message">
+            <img src="images/user-avatar.png" alt="User Avatar" width="30">
+            <strong>Charlie Davis</strong>: Happy Birthday!<br>
+            <small>1:00 PM</small>
+        </div>
+    </section>
 </body>
 </html>

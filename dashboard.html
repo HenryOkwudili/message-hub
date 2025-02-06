@@ -6,31 +6,40 @@
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
     <nav class="bg-white shadow-md">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <img src="https://via.placeholder.com/40" alt="Logo" class="mr-3 rounded-full">
                 <span class="font-bold text-xl">Message Hub</span>
             </div>
             <div class="flex items-center">
+                <input type="text" placeholder="Search messages..." class="px-4 py-2 rounded-full border mr-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <a href="index.html" class="text-blue-500 hover:text-blue-700">Home</a>
             </div>
         </div>
     </nav>
 
-    <div class="container mx-auto px-6 py-6">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="flex border-b border-gray-200">
-                <a href="#gmail" class="inline-block p-4 text-blue-500 hover:text-blue-700 border-b-2 border-blue-500 font-semibold" onclick="showTab('gmail')">Gmail</a>
-                <a href="#whatsapp" class="inline-block p-4 text-gray-600 hover:text-blue-700 border-b-2 border-transparent font-semibold" onclick="showTab('whatsapp')">WhatsApp</a>
-                <a href="#instagram" class="inline-block p-4 text-gray-600 hover:text-blue-700 border-b-2 border-transparent font-semibold" onclick="showTab('instagram')">Instagram</a>
-                <a href="#facebook" class="inline-block p-4 text-gray-600 hover:text-blue-700 border-b-2 border-transparent font-semibold" onclick="showTab('facebook')">Facebook</a>
-            </div>
+    <!-- Sidebar and Main Content -->
+    <div class="container mx-auto px-6 py-6 flex">
+        <!-- Sidebar -->
+        <aside class="w-1/4 pr-6">
+            <ul class="space-y-2">
+                <li><a href="#gmail" class="flex items-center py-2 px-4 rounded hover:bg-gray-200 transition duration-300" onclick="showTab('gmail')"><img src="https://via.placeholder.com/20" alt="Gmail" class="mr-2"> Gmail</a></li>
+                <li><a href="#whatsapp" class="flex items-center py-2 px-4 rounded hover:bg-gray-200 transition duration-300" onclick="showTab('whatsapp')"><img src="https://via.placeholder.com/20" alt="WhatsApp" class="mr-2"> WhatsApp</a></li>
+                <li><a href="#instagram" class="flex items-center py-2 px-4 rounded hover:bg-gray-200 transition duration-300" onclick="showTab('instagram')"><img src="https://via.placeholder.com/20" alt="Instagram" class="mr-2"> Instagram</a></li>
+                <li><a href="#facebook" class="flex items-center py-2 px-4 rounded hover:bg-gray-200 transition duration-300" onclick="showTab('facebook')"><img src="https://via.placeholder.com/20" alt="Facebook" class="mr-2"> Facebook</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="w-3/4">
             <div id="gmail" class="p-4">
+                <h2 class="text-2xl font-bold mb-4">Gmail Messages</h2>
                 <ul class="divide-y divide-gray-200">
                     <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-2 rounded">
+                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-4 rounded-lg transition duration-300">
                             <img src="https://via.placeholder.com/40" alt="Sender" class="mr-4 rounded-full">
                             <div>
                                 <p class="font-bold">John Doe</p>
@@ -40,7 +49,7 @@
                         </a>
                     </li>
                     <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-2 rounded">
+                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-4 rounded-lg transition duration-300">
                             <img src="https://via.placeholder.com/40" alt="Sender" class="mr-4 rounded-full">
                             <div>
                                 <p class="font-bold">Jane Smith</p>
@@ -49,13 +58,13 @@
                             <span class="ml-auto text-gray-500">9:45 AM</span>
                         </a>
                     </li>
-                    <!-- Add more messages as needed -->
                 </ul>
             </div>
             <div id="whatsapp" class="p-4 hidden">
+                <h2 class="text-2xl font-bold mb-4">WhatsApp Messages</h2>
                 <ul class="divide-y divide-gray-200">
                     <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-2 rounded">
+                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-4 rounded-lg transition duration-300">
                             <img src="https://via.placeholder.com/40" alt="Sender" class="mr-4 rounded-full">
                             <div>
                                 <p class="font-bold">Alice Johnson</p>
@@ -64,13 +73,13 @@
                             <span class="ml-auto text-gray-500">11:00 AM</span>
                         </a>
                     </li>
-                    <!-- Add more messages as needed -->
                 </ul>
             </div>
             <div id="instagram" class="p-4 hidden">
+                <h2 class="text-2xl font-bold mb-4">Instagram Messages</h2>
                 <ul class="divide-y divide-gray-200">
                     <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-2 rounded">
+                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-4 rounded-lg transition duration-300">
                             <img src="https://via.placeholder.com/40" alt="Sender" class="mr-4 rounded-full">
                             <div>
                                 <p class="font-bold">Bob Brown</p>
@@ -79,13 +88,13 @@
                             <span class="ml-auto text-gray-500">12:00 PM</span>
                         </a>
                     </li>
-                    <!-- Add more messages as needed -->
                 </ul>
             </div>
             <div id="facebook" class="p-4 hidden">
+                <h2 class="text-2xl font-bold mb-4">Facebook Messages</h2>
                 <ul class="divide-y divide-gray-200">
                     <li class="py-4">
-                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-2 rounded">
+                        <a href="message_detail.html" class="flex items-center hover:bg-gray-100 p-4 rounded-lg transition duration-300">
                             <img src="https://via.placeholder.com/40" alt="Sender" class="mr-4 rounded-full">
                             <div>
                                 <p class="font-bold">Charlie Davis</p>
@@ -94,20 +103,15 @@
                             <span class="ml-auto text-gray-500">1:00 PM</span>
                         </a>
                     </li>
-                    <!-- Add more messages as needed -->
                 </ul>
             </div>
-        </div>
+        </main>
     </div>
 
     <script>
         function showTab(tabId) {
-            const tabs = document.querySelectorAll('[id^="tab-"]');
-            const contents = document.querySelectorAll('[id^=""]');
-            tabs.forEach(tab => tab.classList.remove('border-blue-500', 'text-blue-500'));
-            contents.forEach(content => content.classList.add('hidden'));
-
-            document.querySelector(`#${tabId}`).classList.add('border-blue-500', 'text-blue-500');
+            const tabs = document.querySelectorAll('[id^=""]');
+            tabs.forEach(tab => tab.classList.add('hidden'));
             document.querySelector(`#${tabId}`).classList.remove('hidden');
         }
 

@@ -6,11 +6,37 @@
     <title>Message Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-3xl text-center">
-        <h1 class="text-4xl font-bold mb-6">Welcome to Message Hub</h1>
-        <p class="text-gray-600 mb-8">Manage all your messages in one place from Gmail, WhatsApp, Instagram, and Facebook.</p>
-        <a href="dashboard.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Go to Dashboard</a>
-    </div>
+<body class="bg-gray-100 font-sans">
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-screen" style="background-image: url('https://via.placeholder.com/1920x1080');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 py-32 relative z-10 text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Message Hub</h1>
+            <p class="text-xl mb-8">Manage all your messages in one place from Gmail, WhatsApp, Instagram, and Facebook.</p>
+            <a href="dashboard.html" class="bg-blue-500 hover:bg-blue-700 transition duration-300 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl">Go to Dashboard</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Why Choose Message Hub?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/100" alt="Unified Inbox" class="mx-auto mb-4">
+                <h3 class="text-xl font-bold mb-2">Unified Inbox</h3>
+                <p class="text-gray-600">View all your messages from Gmail, WhatsApp, Instagram, and Facebook in one place.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/100" alt="AI Suggestions" class="mx-auto mb-4">
+                <h3 class="text-xl font-bold mb-2">AI Suggestions</h3>
+                <p class="text-gray-600">Get smart reply suggestions to save time and improve communication efficiency.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/100" alt="User-Friendly Design" class="mx-auto mb-4">
+                <h3 class="text-xl font-bold mb-2">User-Friendly Design</h3>
+                <p class="text-gray-600">Intuitive interface designed for seamless usability across devices.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
